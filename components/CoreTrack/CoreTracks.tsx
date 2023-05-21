@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
+import QuaterBoxes from "../QuarterBoxes/QuaterBoxes";
 
 const CoreTrackData = [
   {
@@ -41,13 +42,12 @@ const CoreTracks = () => {
       <div className="my-20 flex flex-col md:flex-row gap-x-8 gap-y-6">
         {CoreTrackData.map((items, i) => {
           return (
-            <div className="flex flex-col flex-1 justify-center border rounded-md relative px-8 py-16">
-              <h4 className="text-lg font-bold">{items.header}</h4>
-              <p className="mt-2 text-slate-600 z-0">{items.discription}</p>
-              <span className="absolute -top-8 right-10 text-[170px] font-bold -z-10 text-gray-200">
-                {i +1}
-              </span>
-            </div>
+        
+              <QuaterBoxes key={items.number}
+              description={items.discription}
+              header={items.header} 
+              number={i +1}/>
+
           );
         })} 
       </div>
