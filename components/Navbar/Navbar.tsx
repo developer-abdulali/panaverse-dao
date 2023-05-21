@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 const Navbar = () => {
   return (
-      <header>
-        <nav className="flex justify-between items-center max-w-screen-xl mx-auto py-5 px-4 sticky top-0">
+      <header className="sticky top-0 bg-white">
+        <nav className="flex justify-between items-center max-w-screen-xl mx-auto py-5 px-4">
           <div>
             <Image
               src="/images/panaverse.svg"
