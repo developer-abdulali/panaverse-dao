@@ -24,7 +24,7 @@ const HeroSection = () => {
           <Button text={"Enroll Now"} />
         </div>
       </div>
-      <div className="flex-1">
+      <div className="flex-1 ml-10">
         <Image
           src="/images/hero-img.svg"
           alt="Heo Poster"
