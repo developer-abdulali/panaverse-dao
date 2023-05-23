@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import QuaterBoxes from "../QuarterBoxes/QuaterBoxes";
 import Image from "next/image";
@@ -20,7 +20,7 @@ export const programsData = [
         number: 4,
       },
       {
-        header: "Quarter V", 
+        header: "Quarter V",
         description:
           "MV-361: Developing Planet-Scale Open Virtual and Augmented Metaverse Experiences",
         number: 5,
@@ -32,7 +32,7 @@ export const programsData = [
     header: "Artificial Intelligence (AI) and Deep Learning Specialization",
     description:
       "The AI and Deep Learning specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models.",
-      image: AiImg,
+    image: AiImg,
     quarters: [
       {
         header: "Quarter IV",
@@ -44,16 +44,18 @@ export const programsData = [
         header: "Quarter V",
         description: "Ai-361: Deep Learning and MLOps",
         number: 5,
-      }
-    ]
-  }
+      },
+    ],
+  },
 ];
 const SpecializedTrack = () => {
-  const [selectedItem, setSelectedItem] = useState("wmd")
+  const [selectedItem, setSelectedItem] = useState("wmd");
 
-  const selectedItemData = programsData.find((item)=>item.slug === selectedItem)
-  
-  console.log(selectedItem)
+  const selectedItemData = programsData.find(
+    (item) => item.slug === selectedItem
+  );
+
+  console.log(selectedItem);
   return (
     <section className="max-w-screen-xl mx-auto px-4">
       <div>
@@ -65,16 +67,14 @@ const SpecializedTrack = () => {
           one or more specializations consisting of two courses each:
         </p>
       </div>
-      <div className="mt-10 flex gap-x-4 gap-y-8">
-        <div className="shadow-xl basis-8/12 rounded-xl border border-slate-200 py-8 px-8">
+      <div className="mt-10 flex flex-col-reverse lg:flex-row gap-x-4 gap-y-8">
+        <div className="shadow-xl basis-8/12 rounded-xl border border-slate-2s00 py-8 px-8">
           <h4 className="text-lg text-primary font-medium">
             Specialized Program
           </h4>
-          <h3 className="text-2xl font-semibold">
-          {selectedItemData?.header}
-          </h3>
+          <h3 className="text-2xl font-semibold">{selectedItemData?.header}</h3>
           <p className="text-xl text-slate-600 mt-2">
-          {selectedItemData?.description}
+            {selectedItemData?.description}
           </p>
           <button className="text-primary text-xl mt-4 underline flex justify-end gap-x-1">
             Learn More
@@ -94,34 +94,37 @@ const SpecializedTrack = () => {
             </svg>
           </button>
           <div className="flex gap-x-4 mt-6">
-            {
-              selectedItemData?.quarters.map((item)=>(
-                <QuaterBoxes
+            {selectedItemData?.quarters.map((item) => (
+              <QuaterBoxes
                 header={item.header}
                 description={item.description}
                 number={item.number}
                 haveBorder={false}
               />
-              ))
-            }
-          
+            ))}
           </div>
         </div>
-        <div className="gap-x-4 px-4 py-6 basis-4/12 space-y-5 bg-slate-200">
+        <div className="gap-x-4 px-4 py-6 basis-4/12 space-y-5">
           {programsData.map((item, i) => {
             return (
-              <div onClick={()=> setSelectedItem(item.slug)} key={item.slug} className="flex gap-x-4 items-center cursor-pointer">
+              <div
+                onClick={() => setSelectedItem(item.slug)}
+                key={item.slug}
+                className="flex gap-x-4 items-center cursor-pointer"
+              >
                 <div className="flex-shrink-0 h-24 w-36">
                   {/* <div className="w-20 h-16 rounded bg-red-300"></div> */}
-                  <Image src={item.image} alt={item.header} className="h-24 object-cover rounded-md"/>
+                  <Image
+                    src={item.image}
+                    alt={item.header}
+                    className="h-24 object-cover rounded-md"
+                  />
                 </div>
                 <div>
                   <h4 className="text-primary font-medium">
                     Specialized Program
                   </h4>
-                  <h3 className="font-semibold text-md">
-                   {item.header}
-                  </h3>
+                  <h3 className="font-semibold text-md">{item.header}</h3>
                 </div>
               </div>
             );
