@@ -4,10 +4,10 @@ import QuaterBoxes from "../QuarterBoxes/QuaterBoxes";
 import Image from "next/image";
 import Web3Img from "../../public/images/metaverse.png";
 import AiImg from "../../public/images/ai.png";
-import cncImg from "../../public/images/cloud.webp";
-import AmbImg from "../../public/images/ambient.webp";
-import GenImg from "../../public/images/genomics.webp";
-import netImg from "../../public/images/network.webp";
+import cncImg from "../../public/images/cloud.png";
+import AmbImg from "../../public/images/ambient.png";
+import GenImg from "../../public/images/genomics.png";
+import netImg from "../../public/images/network.png";
 import Link from "next/link";
 
 export const programsData = [
@@ -175,9 +175,10 @@ const SpecializedTrack = () => {
                 />
               </svg>
             </button>
-          <div className="flex gap-x-4 mt-6">
+          <div className="flex flex-col md:flex-row gap-x-4 mt-6">
             {selectedItemData?.quarters.map((item) => (
               <QuaterBoxes
+              key={item.number}
                 header={item.header}
                 description={item.description}
                 number={item.number}

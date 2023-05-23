@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Your page description goes here" />
-        <link rel="icon" href="/images/panaverse.svg" />
+        <link rel="icon" href="/images/panaverse.png" />
         <title>Panaverse Dao</title>
       </Head>
       <Navbar />
