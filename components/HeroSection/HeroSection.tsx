@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "@/components/Button/Button";
+import Link from "next/link";
 const HeroSection = () => {
   return (
     <section className="flex flex-col md:flex-row items-center px-4 max-w-screen-xl mx-auto">
@@ -21,7 +22,9 @@ const HeroSection = () => {
           Technologies
         </p>
         <div className="mt-5">
-          <Button text={"Enroll Now"} />
+          <Link target="_blank" href="https://www.piaic.org/">
+            <Button text={"Learn More"} />
+          </Link>
         </div>
       </div>
       <div className="flex-1">
@@ -35,4 +38,4 @@ const HeroSection = () => {
     </section>
   );
 };
-export default HeroSection
+export default HeroSection;

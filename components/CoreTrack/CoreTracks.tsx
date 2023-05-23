@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 import QuaterBoxes from "../QuarterBoxes/QuaterBoxes";
+import Link from "next/link";
 
 const CoreTrackData = [
   {
@@ -35,21 +36,23 @@ const CoreTracks = () => {
           following three core courses:
         </p>
         <div className="mt-5">
-          <Button text={"Learn More"} />
-        </div> 
+          <Link target="_blank" href="https://portal.piaic.org/signup">
+            <Button text={"Enroll Now"} />
+          </Link>
+        </div>
       </div>
 
       <div className="my-20 flex flex-col md:flex-row gap-x-8 gap-y-6">
         {CoreTrackData.map((items, i) => {
           return (
-        
-              <QuaterBoxes key={items.number}
+            <QuaterBoxes
+              key={items.number}
               description={items.discription}
-              header={items.header} 
-              number={i +1}/>
-
+              header={items.header}
+              number={i + 1}
+            />
           );
-        })} 
+        })}
       </div>
     </section>
   );
