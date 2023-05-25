@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 const Navbar = () => {
   return (
-    <header className="sticky top-0">
+    <header className="sticky top-0 z-10">
       <nav className="flex justify-between items-center max-w-screen-xl mx-auto py-5 px-4 bg-[rgba(256,256,256,0.9)] backdrop-blur">
         <div>
           <Image

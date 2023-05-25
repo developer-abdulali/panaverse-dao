@@ -150,7 +150,8 @@ const SpecializedTrack = () => {
         </p>
       </div>
       <div className="mt-10 flex flex-col-reverse lg:flex-row gap-x-4 gap-y-8">
-        <div className="shadow-xl basis-8/12 rounded-xl border border-slate-200 py-8 px-8 h-[550px]">
+      {/* eft side box start */}
+        <div className="self-start shadow-xl basis-8/12 sticky top-28 rounded-xl border border-slate-200 py-8 px-8">
           <h4 className="text-lg text-primary font-medium">
             Specialized Program
           </h4>
@@ -187,6 +188,8 @@ const SpecializedTrack = () => {
             ))}
           </div>
         </div>
+        {/* Left side box end */}
+        {/* Right side box start */}
         <div className="gap-x-4 px-4 py-6 basis-4/12 space-y-5">
           {programsData.map((item, i) => {
             return (
@@ -196,7 +199,6 @@ const SpecializedTrack = () => {
                 className="flex gap-x-4 items-center cursor-pointer"
               >
                 <div className="flex-shrink-0 h-24 w-36">
-                  {/* <div className="w-20 h-16 rounded bg-red-300"></div> */}
                   <Image
                     src={item.image}
                     alt={item.header}
@@ -207,12 +209,13 @@ const SpecializedTrack = () => {
                   <h4 className="text-primary font-medium">
                     Specialized Program
                   </h4>
-                  <h3 className="font-semibold text-md">{item.header}</h3>
+                  <h3 className="font-semibold text-md w-full">{item.header}</h3>
                 </div>
               </div>
             );
           })}
         </div>
+        {/* Right side box end */}
       </div>
     </section>
   );
