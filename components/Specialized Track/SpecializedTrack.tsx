@@ -8,7 +8,6 @@ import cncImg from "../../public/images/cloud.png";
 import AmbImg from "../../public/images/ambient.png";
 import GenImg from "../../public/images/genomics.png";
 import netImg from "../../public/images/network.png";
-import Link from "next/link";
 
 export const programsData = [
   {
@@ -150,7 +149,7 @@ const SpecializedTrack = () => {
         </p>
       </div>
       <div className="mt-10 flex flex-col-reverse lg:flex-row gap-x-4 gap-y-8">
-      {/* eft side box start */}
+      {/* Left side box start */}
         <div className="self-start shadow-xl basis-8/12 sticky top-28 rounded-xl border border-slate-200 py-8 px-8">
           <h4 className="text-lg text-primary font-medium">
             Specialized Program
