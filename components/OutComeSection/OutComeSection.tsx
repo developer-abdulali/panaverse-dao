@@ -33,6 +33,7 @@ const OutComeSection = () => {
             {outcomePoints.map((item, i) => (
               <div className="flex gap-2 items-center" key={i}>
                 <svg
+                className="flex-shrink-0"
                   width="46"
                   height="46"
                   viewBox="0 0 46 46"
