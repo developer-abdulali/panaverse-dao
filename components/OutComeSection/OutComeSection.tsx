@@ -64,14 +64,13 @@ const OutComeSection = () => {
                     </radialGradient>
                   </defs>
                 </svg>
-
                 <h3 className="font-medium text-lg"> {item}</h3>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <hr className="mt-32 text-slate-200" />
+      <hr className="mt-16 md:mt-32 text-slate-200" />
     </section>
   );
 };
