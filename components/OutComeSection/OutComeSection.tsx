@@ -11,8 +11,8 @@ const outcomePoints = [
 
 const OutComeSection = () => {
   return (
-    <section className="max-w-screen-xl mx-auto px-4">
-      <div className="flex flex-col-reverse gap-x-8 items-center md:flex-row">
+    <section className="">
+      <div className="max-w-screen-xl mx-auto px-4 flex flex-col-reverse gap-x-8 items-center md:flex-row">
         {/* {Left side} */}
         <div className="flex-1">
           <Image src={outCome} alt="Out-come-poster" />
@@ -70,6 +70,7 @@ const OutComeSection = () => {
           </div>
         </div>
       </div>
+      <hr className="mt-32 text-slate-200" />
     </section>
   );
 };
