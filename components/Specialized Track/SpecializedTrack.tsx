@@ -182,7 +182,6 @@ const SpecializedTrack = () => {
                 header={item.header}
                 description={item.description}
                 number={item.number}
-                haveBorder={false}
               />
             ))}
           </div>
