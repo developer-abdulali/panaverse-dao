@@ -13,7 +13,7 @@ const Navbar = () => {
             height={50}
           />
         </div>
-        <ul className="flex space-x-9 font-semibold">
+        <ul className="flex space-x-9 font-semibold text-[#4A5B5C] hover:text-teal-900 duration-150">
           <li>
             <Link href="/">Home</Link>
           </li>
